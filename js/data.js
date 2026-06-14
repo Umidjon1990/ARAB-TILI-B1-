@@ -1237,4 +1237,609 @@ const LESSON2 = {
   ]
 };
 
-const GAME_DATA = { lessons: [LESSON1, LESSON2] };
+/* ================================================================
+   3-DARS
+   Sarf: Misol fe'llari (وَضَعَ، وَثَبَ) — moziy/muzoriy/amr/majhul/ismu
+   Nahv: عَلَامَاتُ النَّصْبِ (fatha, alif, kasra, ya, nun tushishi)
+   Matn: عِيدُ الْعُمَّالِ (1-may — ishchilar bayrami)
+   Og'zaki: المدينة أم القرية (shahar yoki qishloq)
+   ================================================================ */
+const LESSON3 = {
+  id: 3,
+  title: "3-dars",
+  subtitle: "Misol fe'llari · علامات النصب · عيد العمال · المدينة والقرية",
+  sections: [
+
+    /* ===================== 1) SARF ===================== */
+    {
+      id: "sarf",
+      name: "Sarf",
+      arName: "الصَّرْف",
+      icon: "🔤",
+      color: "#6c5ce7",
+      desc: "Misol fe'llari — vov bilan boshlanuvchi fe'llar",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "«Misol» fe'l qanday fe'l?",
+          options: [
+            "Birinchi o'zak harfi «vov» yoki «yo» (illat) bo'lgan fe'l",
+            "2- va 3-harflari bir xil bo'lgan fe'l",
+            "O'rtasi alif bo'lgan fe'l",
+            "Oxiri illat harfi bo'lgan fe'l"
+          ],
+          answer: 0,
+          explain: "Misol fe'l — birinchi harfi و yoki ي (illat) bo'lgan fe'l: misoli vov yoki misoli yo."
+        },
+        {
+          type: "mcq",
+          prompt: "Misol fe'l nega «misoli vov» yoki «misoli yo» deb ataladi?",
+          options: [
+            "«vov» yoki «yo» bilan boshlangani uchun",
+            "Oxiri «vov» bilan tugagani uchun",
+            "O'rtasi «yo» bo'lgani uchun",
+            "Ikki marta «vov» kelgani uchun"
+          ],
+          answer: 0,
+          explain: "Birinchi harfi و bo'lsa — misoli vov, ي bo'lsa — misoli yo."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَضَعَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["qo'ydi", "sakradi", "meros oldi", "berdi"],
+          answer: 0,
+          explain: "وَضَعَ — qo'ydi, joylashtirdi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["sakradi", "qo'ydi", "meros oldi", "berdi"],
+          answer: 0,
+          explain: "وَثَبَ — sakradi, irg'ib turdi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["meros oldi", "sakradi", "qo'ydi", "yetib keldi"],
+          answer: 0,
+          explain: "وَرِثَ — meros oldi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَهَبَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["berdi (hadya qildi)", "qo'ydi", "sakradi", "meros oldi"],
+          answer: 0,
+          explain: "وَهَبَ — berdi, hadya qildi, in'om etdi."
+        },
+        {
+          type: "match",
+          prompt: "Fe'llarni ma'nosi bilan juftlang",
+          pairs: [
+            { ar: "وَضَعَ", uz: "qo'ydi" },
+            { ar: "وَثَبَ", uz: "sakradi" },
+            { ar: "وَرِثَ", uz: "meros oldi" },
+            { ar: "وَهَبَ", uz: "berdi" }
+          ],
+          explain: "وَضَعَ-qo'ydi, وَثَبَ-sakradi, وَرِثَ-meros oldi, وَهَبَ-berdi."
+        },
+        {
+          type: "mcq",
+          prompt: "Misol fe'lning MUZORIY shaklida ko'pincha nima yuz beradi?",
+          options: [
+            "Birinchi harf «vov» tushib qoladi",
+            "Oxirgi harf ikkilanadi",
+            "O'rta unli har doim «u» bo'ladi",
+            "Hech qanday o'zgarish bo'lmaydi"
+          ],
+          answer: 0,
+          explain: "Masalan: وَضَعَ → يَضَعُ, وَثَبَ → يَثِبُ — muzoriyda «vov» tushadi (ammo barcha fe'llarda emas)."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَضَعَ» (qo'ydi) fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَضَعُ", "يَوْضَعُ", "وَضَعَ", "يَضِعُ"],
+          answer: 0,
+          explain: "وَضَعَ → يَضَعُ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» (sakradi) fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَثِبُ", "يَوْثِبُ", "يَثَبُ", "وَثَبَ"],
+          answer: 0,
+          explain: "وَثَبَ → يَثِبُ — «vov» tushadi, o'rta unli «i»."
+        },
+        {
+          type: "fill",
+          prompt: "«وَضَعَ» — نَحْنُ uchun MOZIY shaklini tanlang",
+          arabic: true,
+          sentence: "نَحْنُ ＿＿",
+          options: ["وَضَعْنَا", "وَضَعُوا", "يَضَعُ", "وَضَعَ"],
+          answer: 0,
+          explain: "Moziy «sahih» kabi tuslanadi: نحن → وَضَعْنَا."
+        },
+        {
+          type: "fill",
+          prompt: "«وَضَعَ» — هُمْ uchun MOZIY shaklini tanlang",
+          arabic: true,
+          sentence: "هُمْ ＿＿",
+          options: ["وَضَعُوا", "وَضَعْنَا", "وَضَعَ", "يَضَعُونَ"],
+          answer: 0,
+          explain: "هُمْ → وَضَعُوا."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» — أَنْتَ uchun AMR (buyruq) shakli qaysi?",
+          arabic: true,
+          options: ["ثِبْ", "اِوْثِبْ", "وَثِبْ", "ثَبْ"],
+          answer: 0,
+          explain: "Amr muzoriy asosida: يَثِبُ → ثِبْ — «vov» tushadi, alif kerak emas."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَضَعَ» — أَنْتَ uchun AMR (buyruq) shakli qaysi?",
+          arabic: true,
+          options: ["ضَعْ", "اِوْضَعْ", "وَضَعْ", "ضَعَّ"],
+          answer: 0,
+          explain: "يَضَعُ → ضَعْ — «vov» tushgani uchun alif kerak emas."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» fe'lining MAJHUL (moziy) shakli qaysi?",
+          arabic: true,
+          options: ["وُثِبَ", "ثِبَ", "يُوثَبُ", "وَاثِبٌ"],
+          answer: 0,
+          explain: "Majhul moziy: وُثِبَ — bu yerda «vov» saqlanadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» fe'lining MAJHUL (muzoriy) shakli qaysi?",
+          arabic: true,
+          options: ["يُوثَبُ", "يَثِبُ", "وُثِبَ", "مَوْثُوبٌ"],
+          answer: 0,
+          explain: "Majhul muzoriy: يُوثَبُ — majhulda «vov» tushmaydi."
+        },
+        {
+          type: "mcq",
+          prompt: "Misol fe'lning MAJHUL shaklida birinchi «vov» nima bo'ladi?",
+          options: [
+            "Saqlanadi (tushmaydi)",
+            "Har doim tushadi",
+            "Alifga aylanadi",
+            "Ikkilanadi"
+          ],
+          answer: 0,
+          explain: "Majhulda «vov» saqlanadi: وُثِبَ، يُوثَبُ. Faqat ma'lum (aniq) muzoriyda tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» fe'lidan yasalgan ISMU FOIL qaysi?",
+          arabic: true,
+          options: ["وَاثِبٌ", "مَوْثُوبٌ", "مَوْثِبٌ", "يُوثَبُ"],
+          answer: 0,
+          explain: "Ismu foil — وَاثِبٌ (sakrovchi)."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَثَبَ» fe'lidan yasalgan ISMU MAF'UL qaysi?",
+          arabic: true,
+          options: ["مَوْثُوبٌ", "وَاثِبٌ", "مَوْثِبٌ", "وُثِبَ"],
+          answer: 0,
+          explain: "Ismu maf'ul — مَوْثُوبٌ."
+        }
+      ]
+    },
+
+    /* ===================== 2) NAHV ===================== */
+    {
+      id: "nahv",
+      name: "Nahv",
+      arName: "النَّحْو",
+      icon: "📐",
+      color: "#00b894",
+      desc: "عَلَامَاتُ النَّصْبِ — nasb alomatlari",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "Nasb (النَّصْب) alomatlari nechta?",
+          arabic: true,
+          options: [
+            "5 ta: الفتحة، الألف، الكسرة، الياء، حذف النون",
+            "4 ta: الضمة، الواو، الألف، النون",
+            "3 ta: الفتحة، الكسرة، الضمة",
+            "2 ta: الفتحة، الياء"
+          ],
+          answer: 0,
+          explain: "عَلَامَاتُ النَّصْبِ خَمْسٌ: الْفَتْحَةُ، الْأَلِفُ، الْكَسْرَةُ، الْيَاءُ، حَذْفُ النُّونِ."
+        },
+        {
+          type: "mcq",
+          prompt: "Ismi mufrad (yakka ot) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["الْفَتْحَة", "الْأَلِف", "الْكَسْرَة", "الْيَاء"],
+          answer: 0,
+          explain: "Ismi mufrad, jam' taksir va fe'l muzori' — الفتحة bilan mansub bo'ladi."
+        },
+        {
+          type: "mcq",
+          prompt: "«الأَسْمَاء الخَمْسَة» (besh ism) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["الْأَلِف", "الْفَتْحَة", "الْكَسْرَة", "الْيَاء"],
+          answer: 0,
+          explain: "Masalan: أَبَاكَ، أَخَاكَ، فَاكَ، حَمَاهَا، ذَا — «alif» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "Jam' muannas solim (الجمع المؤنث السالم) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["الْكَسْرَة", "الْفَتْحَة", "الْأَلِف", "الْيَاء"],
+          answer: 0,
+          explain: "Masalan: إِنَّ الْمُعَلِّمَاتِ — jam' muannas solim «kasra» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "Ism musanna (الْمُثَنَّى — ikkilik) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["الْيَاء", "الْأَلِف", "الْفَتْحَة", "الْكَسْرَة"],
+          answer: 0,
+          explain: "Masalan: قَرَأْتُ كِتَابَيْنِ — musanna «yo» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "Jam' muzakkar solim (الجمع المذكر السالم) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["الْيَاء", "الْأَلِف", "الْفَتْحَة", "الْكَسْرَة"],
+          answer: 0,
+          explain: "Masalan: إِنَّ الْمُعَلِّمِينَ — jam' muzakkar solim «yo» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "Af'al xamsa (الأفعال الخمسة) ning nasb alomati qaysi?",
+          arabic: true,
+          options: ["حَذْفُ النُّون (nun tushishi)", "الْفَتْحَة", "الْأَلِف", "الْكَسْرَة"],
+          answer: 0,
+          explain: "Masalan: لَنْ تَلْعَبُوا، أَنْ تَجْتَهِدِي — «nun» tushishi bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "«رَأَيْتُ أَخَاكَ فِي السُّوقِ» — «أَخَاكَ» ning nasb alomati?",
+          arabic: true,
+          options: ["الْأَلِف (asma xamsa)", "الْفَتْحَة", "الْكَسْرَة", "الْيَاء"],
+          answer: 0,
+          explain: "«أَخَاكَ» — asma xamsadan, «alif» bilan mansub (مفعول به)."
+        },
+        {
+          type: "mcq",
+          prompt: "«حَفِظْتُ دَرْسَيْنِ فِي النَّحْوِ» — «دَرْسَيْنِ» ning nasb alomati?",
+          arabic: true,
+          options: ["الْيَاء (musanna)", "الْفَتْحَة", "الْأَلِف", "الْكَسْرَة"],
+          answer: 0,
+          explain: "«دَرْسَيْنِ» — musanna (ikkilik), «yo» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "«شَاهَدْتُ الْمُهَنْدِسِينَ فِي الْمَصْنَعِ» — «الْمُهَنْدِسِينَ» ning nasb alomati?",
+          arabic: true,
+          options: ["الْيَاء (jam' muzakkar solim)", "الْكَسْرَة", "الْفَتْحَة", "الْأَلِف"],
+          answer: 0,
+          explain: "«الْمُهَنْدِسِينَ» — jam' muzakkar solim, «yo» bilan mansub."
+        },
+        {
+          type: "mcq",
+          prompt: "«لَنْ تَلْعَبُوا فِي السَّاحَةِ» — «تَلْعَبُوا» ning nasb alomati?",
+          arabic: true,
+          options: ["حَذْفُ النُّون (af'al xamsa)", "الْفَتْحَة", "الْيَاء", "الْكَسْرَة"],
+          answer: 0,
+          explain: "«تَلْعَبُوا» — af'al xamsadan, «nun» tushishi bilan mansub (لَنْ dan keyin)."
+        },
+        {
+          type: "mcq",
+          prompt: "«تَعَلَّمَ مُحَمَّدٌ النَّحْوَ» — «النَّحْوَ» ning nasb alomati?",
+          arabic: true,
+          options: ["الْفَتْحَة (ismi mufrad)", "الْكَسْرَة", "الْأَلِف", "الْيَاء"],
+          answer: 0,
+          explain: "«النَّحْوَ» — ismi mufrad mafʼul, «fatha» bilan mansub."
+        },
+        {
+          type: "match",
+          prompt: "Arabcha gapni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "شَرِبَ أَحْمَدُ الْعَصِيرَ الْبَارِدَ", uz: "Ahmad sovuq sharbatni ichdi" },
+            { ar: "كَتَبَ الْوَلَدُ رِسَالَةً طَوِيلَةً", uz: "Bola uzun xat yozdi" },
+            { ar: "رَأَيْتُ أَخَاكَ فِي السُّوقِ", uz: "Bozorda akangni ko'rdim" }
+          ],
+          explain: "Qo'llanmadagi mashq gaplaridan."
+        },
+        {
+          type: "match",
+          prompt: "Arabcha gapni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "حَفِظْتُ دَرْسَيْنِ فِي النَّحْوِ", uz: "Nahvdan ikki dars yodladim" },
+            { ar: "شَاهَدْتُ الْمُهَنْدِسِينَ فِي الْمَصْنَعِ", uz: "Zavodda muhandislarni ko'rdim" },
+            { ar: "سَافَرَتِ الْمُعَلِّمَاتُ إِلَى دُبَيْ", uz: "O'qituvchi ayollar Dubayga safar qilishdi" }
+          ],
+          explain: "Qo'llanmadagi mashq gaplaridan."
+        },
+        {
+          type: "fill",
+          prompt: "Bo'sh joyga nasb alomatini qo'ying: «أُرِيدُ أَنْ أَزُورَ الْمَدِينَة＿» (mafʼul)",
+          arabic: true,
+          sentence: "...أَزُورَ الْمَدِينَة ＿",
+          options: ["َ  (fatha)", "ٌ  (damma)", "ٍ  (kasra)", "ْ  (sukun)"],
+          answer: 0,
+          explain: "«الْمَدِينَةَ» — ismi mufrad mafʼul, «fatha» bilan mansub."
+        }
+      ]
+    },
+
+    /* ===================== 3) MATN ===================== */
+    {
+      id: "matn",
+      name: "Matn",
+      arName: "النَّصّ",
+      icon: "📖",
+      color: "#0984e3",
+      desc: "عِيدُ الْعُمَّالِ — 1-may ishchilar bayrami",
+      readingTitle: "لِمَاذَا أَصْبَحَ الْأَوَّلُ مِنْ مَايُو عِيدًا لِلْعُمَّالِ",
+      reading: "بِالْأَغَانِي وَالْمَسِيرَاتِ وَالْخُطَبِ الرَّنَّانَةِ، وَحَتَّى الْمِهْرَجَانَاتِ الْمُوسِيقِيَّةِ، يَحْتَفِلُ مِئَاتُ الْمَلَايِينِ مِنَ الْعُمَّالِ فِي أَغْلَبِ الْبُلْدَانِ بِالْيَوْمِ الْعَالَمِيِّ لِلْعُمَّالِ أَوْ عِيدِ الْعُمَّالِ، فِي الْأَوَّلِ مِنْ مَايُو/أَيَّارَ مِنْ كُلِّ عَامٍ. تَارِيخِيًّا بَدَأَتِ الطَّبَقَةُ الْعَامِلَةُ الْعَالَمِيَّةُ تَتَفَاعَلُ بِقُوَّةٍ مَعَ الْأَفْكَارِ الَّتِي تُعَزِّزُ حُقُوقَهَا الْأَسَاسِيَّةَ مُنْذُ الْأَوَّلِ مِنْ مَايُو عَامَ 1889، وَذَلِكَ عَلَى وَقْعِ احْتِجَاجَاتٍ عُمَّالِيَّةٍ كُبْرَى أُسِيلَتْ خِلَالَهَا دِمَاءٌ. هَذِهِ الِاحْتِجَاجَاتُ انْدَلَعَتْ فِي الْوِلَايَاتِ الْمُتَّحِدَةِ، وَبِشَكْلٍ رَئِيسِيٍّ فِي مَدِينَةِ شِيكَاغُو.",
+      questions: [
+        {
+          type: "truefalse",
+          prompt: "تَعَامَلَتِ الشُّرْطَةُ مَعَ احْتِجَاجَاتِ الْعُمَّالِ فِي شِيكَاغُو بِلِينٍ وَلُطْفٍ",
+          arabic: true,
+          answer: false,
+          explain: "خَطَأ — namoyishlar davomida qon to'kilgan (أُسِيلَتْ دِمَاءٌ), demak yumshoq munosabat bo'lmagan."
+        },
+        {
+          type: "truefalse",
+          prompt: "الْأَوَّلُ مِنْ مَايُو هُوَ عِيدُ الْعُمَّالِ فِي جَمِيعِ الْبُلْدَانِ",
+          arabic: true,
+          answer: false,
+          explain: "خَطَأ — matnda «أَغْلَبِ الْبُلْدَانِ» (ko'p davlatlarda) deyilgan, «barcha» emas."
+        },
+        {
+          type: "truefalse",
+          prompt: "تَحْتَفِلُ أَغْلَبُ الدُّوَلِ بِالْيَوْمِ الْعَالَمِيِّ لِلْعُمَّالِ فِي الْأَوَّلِ مِنْ مَايُو",
+          arabic: true,
+          answer: true,
+          explain: "صَوَاب — ko'p davlatlar 1-may kuni ishchilar bayramini nishonlaydi."
+        },
+        {
+          type: "mcq",
+          prompt: "يَحْتَفِلُ الْعُمَّالُ بِعِيدِهِمْ بِـ ＿＿",
+          arabic: true,
+          options: ["الْمَسِيرَاتِ", "السَّيَّارَاتِ", "الِامْتِحَانَاتِ", "الْفَيْرُوسَاتِ"],
+          answer: 0,
+          explain: "Ishchilar bayramni qo'shiq, marshlar (الْمَسِيرَاتِ) va xitoblar bilan nishonlaydi."
+        },
+        {
+          type: "mcq",
+          prompt: "فِي الْأَوَّلِ مِنْ مَايُو عَامَ 1889 بَدَأَتْ ＿＿",
+          arabic: true,
+          options: ["الِاحْتِجَاجَاتُ", "الْحَرَارَةُ", "الْعُطْلَةُ", "الْمَدْرَسَةُ"],
+          answer: 0,
+          explain: "1889-yilda ishchilarning katta namoyishlari (الِاحْتِجَاجَاتُ) boshlangan."
+        },
+        {
+          type: "mcq",
+          prompt: "أَيْنَ انْدَلَعَتِ الِاحْتِجَاجَاتُ بِشَكْلٍ رَئِيسِيٍّ؟",
+          arabic: true,
+          options: [
+            "فِي مَدِينَةِ شِيكَاغُو (الْوِلَايَاتُ الْمُتَّحِدَةُ)",
+            "فِي الْقَاهِرَةِ",
+            "فِي بَارِيسَ",
+            "فِي دُبَيْ"
+          ],
+          answer: 0,
+          explain: "Namoyishlar AQSHda, asosan Chikago shahrida boshlangan."
+        },
+        {
+          type: "match",
+          prompt: "So'zni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "أَغَانِي", uz: "qo'shiqlar" },
+            { ar: "مَسِيرَةٌ", uz: "marsh / yurish" },
+            { ar: "مِهْرَجَانٌ", uz: "festival" },
+            { ar: "دِمَاءٌ", uz: "qon" }
+          ],
+          explain: "Matn lug'atidan."
+        },
+        {
+          type: "mcq",
+          prompt: "«عِيدُ الْعُمَّالِ» iborasining ma'nosi qaysi?",
+          arabic: true,
+          options: ["ishchilar bayrami", "milliy bayram", "diniy bayram", "yangi yil"],
+          answer: 0,
+          explain: "عِيدُ الْعُمَّالِ — ishchilar bayrami (1-may)."
+        },
+        {
+          type: "mcq",
+          prompt: "«الطَّبَقَةُ الْعَامِلَةُ» iborasining ma'nosi qaysi?",
+          arabic: true,
+          options: ["ishchilar sinfi", "o'qituvchilar", "boy tabaqa", "talabalar"],
+          answer: 0,
+          explain: "الطَّبَقَةُ الْعَامِلَةُ — ishchilar sinfi."
+        },
+        {
+          type: "mcq",
+          prompt: "«انْدَلَعَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["alanga oldi / boshlandi", "tugadi", "uxladi", "qaytdi"],
+          answer: 0,
+          explain: "انْدَلَعَ — (urush, namoyish) alanga oldi, avj oldi."
+        }
+      ]
+    },
+
+    /* ===================== 4) OG'ZAKI ===================== */
+    {
+      id: "ogzaki",
+      name: "Og'zaki",
+      arName: "الْمُحَادَثَة",
+      icon: "🗣️",
+      color: "#e17055",
+      desc: "الْمَدِينَة وَالْقَرْيَة — shahar yoki qishloq",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "«هَلْ تُفَضِّلُ السَّكَنَ فِي الْمَدِينَةِ أَمْ فِي الْقَرْيَةِ؟» — namunada qaysi biri afzal ko'rilgan?",
+          arabic: true,
+          options: ["الْقَرْيَة (qishloq)", "الْمَدِينَة (shahar)", "الْفُنْدُق (mehmonxona)", "الْعَاصِمَة (poytaxt)"],
+          answer: 0,
+          explain: "«أُفَضِّلُ السَّكَنَ فِي الْقَرْيَةِ لِأَنَّهَا هَادِئَةٌ وَجَمِيلَةٌ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, nega u qishloqni afzal ko'radi?",
+          arabic: true,
+          options: [
+            "هَادِئَةٌ وَجَمِيلَةٌ (tinch va chiroyli)",
+            "مُزْدَحِمَةٌ (gavjum)",
+            "بَعِيدَةٌ عَنِ الْأُسْرَةِ",
+            "غَالِيَةٌ جِدًّا"
+          ],
+          answer: 0,
+          explain: "«لِأَنَّهَا هَادِئَةٌ وَجَمِيلَةٌ» — chunki u tinch va chiroyli."
+        },
+        {
+          type: "mcq",
+          prompt: "«أَيْنَ تَسْكُنُ الْآنَ؟» — namunaviy javobda u hozir qayerda yashaydi?",
+          arabic: true,
+          options: [
+            "فِي الْمَدِينَةِ مَعَ أَبِي وَأُمِّي وَإِخْوَتِي",
+            "فِي الْقَرْيَةِ وَحْدِي",
+            "فِي فُنْدُقٍ كَبِيرٍ",
+            "فِي بَلَدٍ آخَرَ"
+          ],
+          answer: 0,
+          explain: "«أَنَا أَسْكُنُ الْآنَ فِي الْمَدِينَةِ مَعَ أَبِي وَأُمِّي وَإِخْوَتِي»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, u qishloqda nimani yaxshi ko'radi?",
+          arabic: true,
+          options: [
+            "الْهُدُوءَ وَالطَّبِيعَةَ (osoyishtalik va tabiat)",
+            "الْخِدْمَاتِ (xizmatlar)",
+            "الِازْدِحَامَ (gavjumlik)",
+            "الْمَتَاجِرَ (do'konlar)"
+          ],
+          answer: 0,
+          explain: "«أُحِبُّ فِي الْقَرْيَةِ الْهُدُوءَ وَالطَّبِيعَةَ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, u shaharda nimani yaxshi ko'radi?",
+          arabic: true,
+          options: [
+            "الْخِدْمَاتِ وَالْأَمَاكِنَ الْمُخْتَلِفَةَ",
+            "الْهُدُوءَ وَالطَّبِيعَةَ",
+            "الْحُقُولَ",
+            "الصَّمْتَ"
+          ],
+          answer: 0,
+          explain: "«أُحِبُّ فِي الْمَدِينَةِ الْخِدْمَاتِ وَالْأَمَاكِنَ الْمُخْتَلِفَةَ»."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْمَدِينَة» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["shahar", "qishloq", "dala", "bog'"],
+          answer: 0,
+          explain: "الْمَدِينَة — shahar."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْقَرْيَة» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["qishloq", "shahar", "ko'cha", "bino"],
+          answer: 0,
+          explain: "الْقَرْيَة — qishloq."
+        },
+        {
+          type: "mcq",
+          prompt: "«مُزْدَحِمَة» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["gavjum (serqatnov)", "tinch", "toza", "chiroyli"],
+          answer: 0,
+          explain: "مُزْدَحِمَة — gavjum, odam ko'p, serqatnov."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْجَوُّ نَقِيٌّ» iborasining ma'nosi qaysi?",
+          arabic: true,
+          options: ["havo toza", "havo issiq", "havo sovuq", "havo namgarchilik"],
+          answer: 0,
+          explain: "الْجَوُّ نَقِيٌّ — havo toza, musaffo."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْحُقُول» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["dalalar", "do'konlar", "uylar", "maktablar"],
+          answer: 0,
+          explain: "الْحُقُول (birligi: الْحَقْل) — dalalar, ekinzorlar."
+        },
+        {
+          type: "match",
+          prompt: "So'zni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "مَدِينَة", uz: "shahar" },
+            { ar: "قَرْيَة", uz: "qishloq" },
+            { ar: "حَدِيقَة", uz: "bog' (park)" },
+            { ar: "حُقُول", uz: "dalalar" }
+          ],
+          explain: "Shahar va qishloq lug'ati."
+        },
+        {
+          type: "match",
+          prompt: "Sifatni tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "هَادِئَة", uz: "tinch" },
+            { ar: "نَقِيّ", uz: "toza" },
+            { ar: "مُزْدَحِمَة", uz: "gavjum" },
+            { ar: "جَمِيلَة", uz: "chiroyli" }
+          ],
+          explain: "Matnda kelgan sifatlar."
+        },
+        {
+          type: "fill",
+          prompt: "Javobni to'ldiring: «أُفَضِّلُ السَّكَنَ فِي الْقَرْيَةِ لِأَنَّهَا ＿＿»",
+          arabic: true,
+          sentence: "...لِأَنَّهَا ＿＿ وَجَمِيلَةٌ",
+          options: ["هَادِئَةٌ", "مُزْدَحِمَةٌ", "بَعِيدَةٌ", "غَالِيَةٌ"],
+          answer: 0,
+          explain: "«لِأَنَّهَا هَادِئَةٌ وَجَمِيلَةٌ» — chunki u tinch va chiroyli."
+        },
+        {
+          type: "fill",
+          prompt: "Javobni to'ldiring: «بَيْتُنَا قَرِيبٌ مِنَ ＿＿ وَالْمَدْرَسَةِ»",
+          arabic: true,
+          sentence: "بَيْتُنَا قَرِيبٌ مِنَ ＿＿ وَالْمَدْرَسَةِ",
+          options: ["الْمَتَاجِرِ", "الْحُقُولِ", "الْبَحْرِ", "الْجِبَالِ"],
+          answer: 0,
+          explain: "«بَيْتُنَا قَرِيبٌ مِنَ الْمَتَاجِرِ وَالْمَدْرَسَةِ» — uyimiz do'konlar va maktabga yaqin."
+        },
+        {
+          type: "match",
+          prompt: "Savolni javobi bilan juftlang",
+          pairs: [
+            { ar: "هَلْ تُفَضِّلُ الْقَرْيَةَ؟", uz: "نَعَمْ، أُفَضِّلُ الْقَرْيَةَ" },
+            { ar: "أَيْنَ تَسْكُنُ الْآنَ؟", uz: "أَسْكُنُ فِي الْمَدِينَةِ" },
+            { ar: "مَاذَا تُحِبُّ فِي الْقَرْيَةِ؟", uz: "أُحِبُّ الْهُدُوءَ وَالطَّبِيعَةَ" }
+          ],
+          arabicBoth: true,
+          explain: "Shahar/qishloq mavzusidagi savol-javoblar."
+        }
+      ]
+    }
+
+  ]
+};
+
+const GAME_DATA = { lessons: [LESSON1, LESSON2, LESSON3] };
