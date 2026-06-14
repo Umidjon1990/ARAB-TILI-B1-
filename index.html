@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f0c29" />
+  <title>Bosqichli Arab Tili B1 — Interaktiv o'yin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .ar, .ar-title, .reading-box, .opt.ar, .q-prompt.ar, .match-item.ar, .tf-btn {
+      font-family: "Amiri", "Segoe UI", serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <canvas id="confetti"></canvas>
+  <div class="combo-flash" id="combo-flash"></div>
+
+  <div class="app">
+    <div class="topbar" id="topbar" style="visibility:hidden">
+      <div class="hearts" id="hearts"></div>
+      <div class="xp-chip">💎 <span id="xp-val">0</span></div>
+      <div class="streak-chip">🔥 <span id="streak-val">0</span></div>
+      <div class="spacer"></div>
+      <button class="icon-btn" id="mute-btn" title="Ovoz">🔊</button>
+      <button class="icon-btn" id="home-btn" title="Bosh sahifa">🏠</button>
+    </div>
+
+    <div class="progress-wrap" id="progress-wrap" style="visibility:hidden">
+      <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <div class="screen" id="screen-root"></div>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
