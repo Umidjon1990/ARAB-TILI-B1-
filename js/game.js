@@ -60,9 +60,44 @@ const App = (() => {
     }, 180);
   }
 
-  /* ================= HOME ================= */
+  /* ================= HOME (dars tanlash) ================= */
   function home() {
-    state.lesson = GAME_DATA.lessons[0];
+    el("topbar").style.visibility = "hidden";
+    el("progress-wrap").style.visibility = "hidden";
+
+    const cards = GAME_DATA.lessons.map((L, i) => {
+      const qCount = L.sections.reduce((a, s) => a + s.questions.length, 0);
+      return `
+      <div class="section-card lesson-card" data-lesson="${i}">
+        <div class="sec-icon" style="background:#ffd16633">${i + 1}</div>
+        <div class="sec-meta">
+          <h3>${L.title}</h3>
+          <p>${L.subtitle}</p>
+          <p style="opacity:.7">${L.sections.length} bo'lim · ${qCount} ta savol</p>
+        </div>
+        <div class="sec-go">›</div>
+      </div>`;
+    }).join("");
+
+    transition(`
+      <div class="hero">
+        <h1>Bosqichli Arab tili B1</h1>
+        <div class="ar-title">اللُّغَةُ العَرَبِيَّةُ</div>
+        <p>Darsni tanlang 👇</p>
+      </div>
+      <div class="section-list">${cards}</div>
+    `);
+
+    setTimeout(() => {
+      document.querySelectorAll(".lesson-card").forEach(c => {
+        c.onclick = () => { SFX.whoosh(); openLesson(+c.dataset.lesson); };
+      });
+    }, 200);
+  }
+
+  /* ================= DARS BO'LIMLARI ================= */
+  function openLesson(li) {
+    state.lesson = GAME_DATA.lessons[li];
     const L = state.lesson;
     el("topbar").style.visibility = "hidden";
     el("progress-wrap").style.visibility = "hidden";
@@ -79,18 +114,22 @@ const App = (() => {
 
     transition(`
       <div class="hero">
-        <h1>Bosqichli Arab tili B1</h1>
-        <div class="ar-title">اللُّغَةُ العَرَبِيَّةُ</div>
-        <p>${L.title} — ${L.subtitle}</p>
+        <h1>${L.title}</h1>
+        <p>${L.subtitle}</p>
       </div>
       <div class="section-list">
+        <div class="section-card back-card" id="back-lessons">
+          <div class="sec-icon" style="background:#ffffff22">←</div>
+          <div class="sec-meta"><h3>Darslar ro'yxati</h3></div>
+        </div>
         ${cards}
         <button class="start-all" id="start-all">🚀 To'liq darsni boshlash (barchasi)</button>
       </div>
     `);
 
     setTimeout(() => {
-      document.querySelectorAll(".section-card").forEach(c => {
+      el("back-lessons").onclick = () => { SFX.click(); home(); };
+      document.querySelectorAll(".section-card[data-sec]").forEach(c => {
         c.onclick = () => { SFX.whoosh(); startSection(+c.dataset.sec); };
       });
       el("start-all").onclick = () => { SFX.whoosh(); startAll(); };
@@ -389,12 +428,16 @@ const App = (() => {
           <div class="stat"><div class="v">${state.xp}</div><div class="l">Jami XP</div></div>
         </div>
         <button class="start-all" id="retry">🔁 Qaytadan</button>
-        <button class="next-btn" id="back-home" style="margin-top:12px">🏠 Bo'limlarga qaytish</button>
+        <button class="next-btn" id="back-home" style="margin-top:12px">📚 Bo'limlarga qaytish</button>
       </div>
     `);
     setTimeout(() => {
       el("retry").onclick = () => { SFX.whoosh(); restartSame(); };
-      el("back-home").onclick = () => { SFX.whoosh(); home(); };
+      el("back-home").onclick = () => {
+        SFX.whoosh();
+        const li = GAME_DATA.lessons.indexOf(state.lesson);
+        openLesson(li >= 0 ? li : 0);
+      };
     }, 200);
   }
 
