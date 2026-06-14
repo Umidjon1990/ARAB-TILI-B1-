@@ -1842,4 +1842,591 @@ const LESSON3 = {
   ]
 };
 
-const GAME_DATA = { lessons: [LESSON1, LESSON2, LESSON3] };
+/* ================================================================
+   4-DARS
+   Sarf: Misol fe'llari — majhul, amr, ismu + وَرِثَ، وَهَبَ، وَجَدَ، وَصَلَ
+   Nahv: عَلَامَةُ الْجَرِّ (kasra — asliy; ya/fatha — far'iy)
+   Matn: الْمُحَافَظَةُ عَلَى الْوَزْنِ فِي الشِّتَاءِ (qishda vazn)
+   Og'zaki: الْعَمَل (kasb-hunar)
+   ================================================================ */
+const LESSON4 = {
+  id: 4,
+  title: "4-dars",
+  subtitle: "Misol (majhul/amr) · علامة الجر · الوزن في الشتاء · العمل",
+  sections: [
+
+    /* ===================== 1) SARF ===================== */
+    {
+      id: "sarf",
+      name: "Sarf",
+      arName: "الصَّرْف",
+      icon: "🔤",
+      color: "#6c5ce7",
+      desc: "Misol fe'llari — majhul, amr va boshqa shakllar",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["meros oldi", "topdi", "yetib keldi", "va'da berdi"],
+          answer: 0,
+          explain: "وَرِثَ — meros oldi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَجَدَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["topdi", "berdi", "yetib keldi", "meros oldi"],
+          answer: 0,
+          explain: "وَجَدَ — topdi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَصَلَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["yetib keldi", "topdi", "va'da berdi", "berdi"],
+          answer: 0,
+          explain: "وَصَلَ — yetib keldi, yetdi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَعَدَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["va'da berdi", "topdi", "yetib keldi", "meros oldi"],
+          answer: 0,
+          explain: "وَعَدَ — va'da berdi."
+        },
+        {
+          type: "match",
+          prompt: "Fe'llarni ma'nosi bilan juftlang",
+          pairs: [
+            { ar: "وَجَدَ", uz: "topdi" },
+            { ar: "وَصَلَ", uz: "yetib keldi" },
+            { ar: "وَعَدَ", uz: "va'da berdi" },
+            { ar: "وَهَبَ", uz: "berdi" }
+          ],
+          explain: "وَجَدَ-topdi, وَصَلَ-yetib keldi, وَعَدَ-va'da berdi, وَهَبَ-berdi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَرِثُ", "يَوْرِثُ", "يَرُثُ", "وَرِثَ"],
+          answer: 0,
+          explain: "وَرِثَ → يَرِثُ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَجَدَ» fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَجِدُ", "يَوْجَدُ", "يَجَدُ", "وَجَدَ"],
+          answer: 0,
+          explain: "وَجَدَ → يَجِدُ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَصَلَ» fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَصِلُ", "يَوْصَلُ", "يَصَلُ", "وَصَلَ"],
+          answer: 0,
+          explain: "وَصَلَ → يَصِلُ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَعَدَ» fe'lining هُوَ uchun muzoriy shakli qaysi?",
+          arabic: true,
+          options: ["يَعِدُ", "يَوْعِدُ", "يَعَدُ", "وَعَدَ"],
+          answer: 0,
+          explain: "وَعَدَ → يَعِدُ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» — أَنْتَ uchun AMR (buyruq) shakli qaysi?",
+          arabic: true,
+          options: ["رِثْ", "اِرِثْ", "وَرِثْ", "اُورَثْ"],
+          answer: 0,
+          explain: "يَرِثُ → رِثْ — «vov» tushgani uchun alif kerak emas."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَصَلَ» — أَنْتَ uchun AMR (buyruq) shakli qaysi?",
+          arabic: true,
+          options: ["صِلْ", "اِصِلْ", "وَصِلْ", "اُوصَلْ"],
+          answer: 0,
+          explain: "يَصِلُ → صِلْ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَعَدَ» — أَنْتَ uchun AMR (buyruq) shakli qaysi?",
+          arabic: true,
+          options: ["عِدْ", "اِعِدْ", "وَعِدْ", "اُوعَدْ"],
+          answer: 0,
+          explain: "يَعِدُ → عِدْ — «vov» tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lining MAJHUL (moziy) shakli qaysi?",
+          arabic: true,
+          options: ["وُرِثَ", "رِثَ", "يُورَثُ", "وَارِثٌ"],
+          answer: 0,
+          explain: "Majhul moziy: وُرِثَ — «vov» saqlanadi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lining MAJHUL (muzoriy) shakli qaysi?",
+          arabic: true,
+          options: ["يُورَثُ", "يَرِثُ", "وُرِثَ", "مَوْرُوثٌ"],
+          answer: 0,
+          explain: "Majhul muzoriy: يُورَثُ — majhulda «vov» tushmaydi."
+        },
+        {
+          type: "mcq",
+          prompt: "«وَرِثَ» fe'lidan yasalgan ISMU MAF'UL qaysi?",
+          arabic: true,
+          options: ["مَوْرُوثٌ", "وَارِثٌ", "مَوْرِثٌ", "يُورَثُ"],
+          answer: 0,
+          explain: "Ismu maf'ul — مَوْرُوثٌ (meros qilingan)."
+        },
+        {
+          type: "mcq",
+          prompt: "Misol fe'lning MAJHUL shaklida birinchi «vov» nima bo'ladi?",
+          options: [
+            "Saqlanadi (وُرِثَ، يُورَثُ)",
+            "Har doim tushadi",
+            "Alifga aylanadi",
+            "Yoga aylanadi"
+          ],
+          answer: 0,
+          explain: "Majhulda «vov» saqlanadi; faqat ma'lum (aniq) muzoriyda tushadi."
+        },
+        {
+          type: "mcq",
+          prompt: "O'rta unlisi «u» bo'lgan misol fe'llar odatda qanday shaklda keladi?",
+          options: [
+            "Mudoaf (ikkilangan) shaklida; «vov» tushmaydi (masalan: وَصَّ)",
+            "Doim alif bilan",
+            "Hech qachon majhul bo'lmaydi",
+            "Faqat amr shaklida"
+          ],
+          answer: 0,
+          explain: "O'rta unlisi «u» bo'lganlar ko'pincha mudoaf shaklida keladi: وَصَّ، وُصَّ، يَوَصُّ، يُوَصُّ — bu holatda «vov» tushmaydi."
+        }
+      ]
+    },
+
+    /* ===================== 2) NAHV ===================== */
+    {
+      id: "nahv",
+      name: "Nahv",
+      arName: "النَّحْو",
+      icon: "📐",
+      color: "#00b894",
+      desc: "عَلَامَةُ الْجَرِّ — jarr alomatlari",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "Jarr (الْجَرّ) ning ASOSIY (asliy) alomati qaysi?",
+          arabic: true,
+          options: ["الْكَسْرَة", "الْفَتْحَة", "الْيَاء", "الضَّمَّة"],
+          answer: 0,
+          explain: "Jarrning asliy alomati — الكسرة."
+        },
+        {
+          type: "mcq",
+          prompt: "Ism qachon مَجْرور bo'ladi?",
+          options: [
+            "Undan oldin jarr harfi kelsa yoki muzof ileyh bo'lsa",
+            "Faqat gap boshida kelsa",
+            "Faqat fe'ldan keyin kelsa",
+            "Hech qachon"
+          ],
+          answer: 0,
+          explain: "Ism jarr harfidan keyin, yoki majrurga atf bo'lsa, yoki muzof ileyh bo'lsa — majrur bo'ladi."
+        },
+        {
+          type: "mcq",
+          prompt: "Ismi mufrad (yakka ot) ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْكَسْرَة", "الْيَاء", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Masalan: ذَهَبْتُ إِلَى الْمَدْرَسَةِ — kasra bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "Jam' muannas solim ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْكَسْرَة", "الْيَاء", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Masalan: ذَهَبْتُ إِلَى الْغَابَاتِ — kasra bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "«الأَسْمَاء الخَمْسَة» ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْيَاء (far'iy)", "الْكَسْرَة", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Masalan: ذَهَبْتُ إِلَى أَخِيكَ — «yo» bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "Ism musanna (ikkilik) ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْيَاء", "الْكَسْرَة", "الْفَتْحَة", "الْأَلِف"],
+          answer: 0,
+          explain: "Masalan: كَتَبْتُ فِي الْمَكْتُوبَيْنِ — «yo» bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "Jam' muzakkar solim ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْيَاء", "الْكَسْرَة", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Masalan: ذَهَبْتُ لِلْمُعَلِّمِينَ — «yo» bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "Mamnu' min as-sarf (الْمَمْنُوع مِنَ الصَّرْف) ning jarr alomati qaysi?",
+          arabic: true,
+          options: ["الْفَتْحَة (far'iy)", "الْكَسْرَة", "الْيَاء", "الضَّمَّة"],
+          answer: 0,
+          explain: "Masalan: اِسْتَرَحْتُ فِي رَمَضَانَ — «fatha» bilan majrur (kasra o'rniga)."
+        },
+        {
+          type: "mcq",
+          prompt: "«ذَهَبْتُ إِلَى أَخِيكَ» — «أَخِيكَ» ning jarr alomati?",
+          arabic: true,
+          options: ["الْيَاء (asma xamsa)", "الْكَسْرَة", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "«أَخِيكَ» — asma xamsadan, «yo» bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "«اِسْتَرَحْتُ فِي رَمَضَانَ» — «رَمَضَانَ» ning jarr alomati?",
+          arabic: true,
+          options: ["الْفَتْحَة (mamnu' min as-sarf)", "الْكَسْرَة", "الْيَاء", "الضَّمَّة"],
+          answer: 0,
+          explain: "«رَمَضَانَ» — mamnu' min as-sarf, shuning uchun kasra emas, «fatha» bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "«ذَهَبْتُ إِلَى الْمَدْرَسَةِ» — «الْمَدْرَسَةِ» ning jarr alomati?",
+          arabic: true,
+          options: ["الْكَسْرَة (ismi mufrad)", "الْيَاء", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Ismi mufrad — kasra bilan majrur."
+        },
+        {
+          type: "mcq",
+          prompt: "«ذَهَبْتُ لِلْمُعَلِّمِينَ فِي الْمَسْجِدِ» — «الْمُعَلِّمِينَ» ning jarr alomati?",
+          arabic: true,
+          options: ["الْيَاء (jam' muzakkar solim)", "الْكَسْرَة", "الْفَتْحَة", "الضَّمَّة"],
+          answer: 0,
+          explain: "Jam' muzakkar solim — «yo» bilan majrur."
+        },
+        {
+          type: "match",
+          prompt: "Arabcha gapni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "سَافَرْتُ إِلَى الْمَدِينَةِ لِلدِّرَاسَةِ", uz: "O'qish uchun shaharga safar qildim" },
+            { ar: "جَلَسْتُ بِجَانِبِ أَخِي فِي الْحَافِلَةِ", uz: "Avtobusda akamning yonida o'tirdim" },
+            { ar: "قَرَأْتُ كِتَابًا عَنِ التَّارِيخِ", uz: "Tarix haqida kitob o'qidim" }
+          ],
+          explain: "Qo'llanmadagi mashq gaplaridan."
+        },
+        {
+          type: "match",
+          prompt: "Arabcha gapni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "سَلَّمْتُ الْكِتَابَ إِلَى أَبِي", uz: "Kitobni otamga topshirdim" },
+            { ar: "الْتَقَيْتُ بِعِيسَى فِي الْمَدْرَسَةِ", uz: "Maktabda Iso bilan uchrashdim" },
+            { ar: "انْتَقَلْتُ إِلَى الْمَدِينَةِ لِلْعَمَلِ", uz: "Ish uchun shaharga ko'chdim" }
+          ],
+          explain: "Qo'llanmadagi mashq gaplaridan."
+        },
+        {
+          type: "fill",
+          prompt: "Bo'sh joyga jarr alomatini qo'ying: «ذَهَبْتُ إِلَى الْمَدْرَسَة＿»",
+          arabic: true,
+          sentence: "ذَهَبْتُ إِلَى الْمَدْرَسَة ＿",
+          options: ["ِ  (kasra)", "َ  (fatha)", "ُ  (damma)", "ْ  (sukun)"],
+          answer: 0,
+          explain: "«إلى» jarr harfidan keyin ismi mufrad — kasra bilan majrur."
+        }
+      ]
+    },
+
+    /* ===================== 3) MATN ===================== */
+    {
+      id: "matn",
+      name: "Matn",
+      arName: "النَّصّ",
+      icon: "📖",
+      color: "#0984e3",
+      desc: "الْمُحَافَظَةُ عَلَى الْوَزْنِ — qishda vazn",
+      readingTitle: "كَيْفَ تُحَافِظُ عَلَى وَزْنِكَ فِي فَصْلِ الشِّتَاءِ",
+      reading: "تَقُولُ الْمُخْتَصَّةُ فِي التَّغْذِيَةِ أَمَانِي النَّجَّار إِنَّ زِيَادَةَ الْوَزْنِ مِنَ الْأُمُورِ الْمُتَوَقَّعَةِ لَدَى كَثِيرٍ مِنَ النَّاسِ فِي الشِّتَاءِ. وَمِنْ أَهَمِّ أَسْبَابِهَا: عَدَمُ مُمَارَسَةِ الرِّيَاضَةِ وَالْبَقَاءُ دَاخِلَ الْمَنْزِلِ، وَالْكَآبَةُ الْمَوْسِمِيَّةُ الَّتِي تُؤَدِّي إِلَى تَنَاوُلِ كَثِيرٍ مِنَ الطَّعَامِ، وَالشُّعُورُ بِالْمَلَلِ وَالْفَرَاغِ، وَتَنَاوُلُ الْحَلْوِيَّاتِ الْغَنِيَّةِ بِالسُّكَّرِ، وَطُولُ فَتْرَةِ النَّوْمِ. وَلِتَجَنُّبِ ذَلِكَ تَنْصَحُ بِتَقْلِيلِ الدُّهُونِ وَالْمَشْرُوبَاتِ الْغَنِيَّةِ بِالسُّعْرَاتِ، وَتَنَاوُلِ شُرْبَةِ الْخُضَارِ وَمَشْرُوبَاتٍ مُفِيدَةٍ لَا سُكَّرَ فِيهَا مِثْلَ الزَّنْجَبِيلِ وَالشَّايِ الْأَخْضَرِ.",
+      questions: [
+        {
+          type: "truefalse",
+          prompt: "الْكَآبَةُ الْمَوْسِمِيَّةُ تُؤَدِّي إِلَى عَدَمِ تَنَاوُلِ الطَّعَامِ",
+          arabic: true,
+          answer: false,
+          explain: "خَطَأ — aksincha, mavsumiy kayfiyat tushkunligi ko'p ovqat yeyishga olib keladi."
+        },
+        {
+          type: "truefalse",
+          prompt: "شُرْبَةُ الْخُضَارِ تَزِيدُ الْوَزْنَ",
+          arabic: true,
+          answer: false,
+          explain: "خَطَأ — sabzavot sho'rvasi tavsiya etiladi (oziq qiymati yuqori, kaloriyasi past)."
+        },
+        {
+          type: "truefalse",
+          prompt: "لِتَجَنُّبِ زِيَادَةِ الْوَزْنِ يُنْصَحُ بِقِلَّةِ تَنَاوُلِ الدُّهُونِ",
+          arabic: true,
+          answer: true,
+          explain: "صَوَاب — vazn ortishidan saqlanish uchun yog'larni kamaytirish tavsiya etiladi."
+        },
+        {
+          type: "truefalse",
+          prompt: "مِنْ أَسْبَابِ زِيَادَةِ الْوَزْنِ طُولُ فَتْرَةِ النَّوْمِ",
+          arabic: true,
+          answer: true,
+          explain: "صَوَاب — uyqu muddatining uzunligi vazn ortishi sabablaridan biri."
+        },
+        {
+          type: "truefalse",
+          prompt: "الزَّنْجَبِيلُ مَشْرُوبٌ مُفِيدٌ لِلْجِسْمِ",
+          arabic: true,
+          answer: true,
+          explain: "صَوَاب — zanjabil tana uchun foydali ichimlik."
+        },
+        {
+          type: "mcq",
+          prompt: "«زِيَادَةُ الْوَزْنِ» iborasiga MA'NODOSH (murodif) so'z qaysi?",
+          arabic: true,
+          options: ["السِّمْنَة", "الْمَرَض", "النَّحَافَة", "الرِّيَاضَة"],
+          answer: 0,
+          explain: "السِّمْنَة (semizlik) — «vazn ortishi» bilan ma'nodosh."
+        },
+        {
+          type: "mcq",
+          prompt: "Quyidagilardan qaysi biri VAZNNI OSHIRADI?",
+          arabic: true,
+          options: [
+            "تَنَاوُلُ الْحَلْوِيَّاتِ الْغَنِيَّةِ بِالسُّكَّرِ",
+            "تَنَاوُلُ مَشْرُوبَاتٍ مُفِيدَةٍ",
+            "تَقْلِيلُ الدُّهُونِ",
+            "مُمَارَسَةُ الرِّيَاضَةِ"
+          ],
+          answer: 0,
+          explain: "Shakarga boy shirinliklar iste'moli vaznni oshiradi."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْكَآبَة» (tushkunlik) so'ziga QARAMA-QARSHI (muzod) so'z qaysi?",
+          arabic: true,
+          options: ["الْفَرَح", "الضَّجَر", "الْمَلَل", "الْحُزْن"],
+          answer: 0,
+          explain: "الْفَرَح (quvonch) — «الكآبة» (tushkunlik) ning ziddi."
+        },
+        {
+          type: "mcq",
+          prompt: "Vazn ortishidan saqlanish uchun qaysi biri FOYDALI?",
+          arabic: true,
+          options: [
+            "تَنَاوُلُ مَشْرُوبَاتٍ لَا تَحْتَوِي عَلَى السُّكَّرِ",
+            "تَنَاوُلُ كَثِيرٍ مِنَ الطَّعَامِ",
+            "طُولُ فَتْرَةِ النَّوْمِ",
+            "الْبَقَاءُ دَاخِلَ الْمَنْزِلِ"
+          ],
+          answer: 0,
+          explain: "Tarkibida shakar bo'lmagan ichimliklar iste'mol qilish foydali."
+        },
+        {
+          type: "mcq",
+          prompt: "«الْفَرَاغ» (bo'sh vaqt / bekorchilik) so'ziga QARAMA-QARSHI so'z qaysi?",
+          arabic: true,
+          options: ["الشُّغْل", "النَّوْم", "الْكَسَل", "الرَّاحَة"],
+          answer: 0,
+          explain: "الشُّغْل (bandlik, ish) — «الفراغ» (bekorchilik) ning ziddi."
+        },
+        {
+          type: "mcq",
+          prompt: "«اِزْدَادَ» fe'lining ma'nosi qaysi?",
+          arabic: true,
+          options: ["oshmoq / ko'paymoq", "kamaymoq", "uxlamoq", "to'xtamoq"],
+          answer: 0,
+          explain: "اِزْدَادَ، يَزْدَادُ — oshmoq, ko'paymoq."
+        },
+        {
+          type: "match",
+          prompt: "So'zni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "أَثَرٌ", uz: "ta'sir" },
+            { ar: "تَجَنَّبَ", uz: "chetlashmoq" },
+            { ar: "نَصَحَ", uz: "maslahat bermoq" },
+            { ar: "الْمُخْتَصَّةُ", uz: "mutaxassis (ayol)" }
+          ],
+          explain: "Matn lug'atidan."
+        }
+      ]
+    },
+
+    /* ===================== 4) OG'ZAKI ===================== */
+    {
+      id: "ogzaki",
+      name: "Og'zaki",
+      arName: "الْمُحَادَثَة",
+      icon: "🗣️",
+      color: "#e17055",
+      desc: "الْعَمَل — kasb-hunar haqida savol-javob",
+      questions: [
+        {
+          type: "mcq",
+          prompt: "«مَاذَا تَعْمَلُ؟» — namunaviy javobda u qayerda va kim bo'lib ishlaydi?",
+          arabic: true,
+          options: [
+            "مُعَلِّمًا فِي مَدْرَسَةٍ صَغِيرَةٍ",
+            "طَبِيبًا فِي الْمُسْتَشْفَى",
+            "سَائِقًا فِي الشَّرِكَةِ",
+            "تَاجِرًا فِي السُّوقِ"
+          ],
+          answer: 0,
+          explain: "«أَنَا أَعْمَلُ مُعَلِّمًا فِي مَدْرَسَةٍ صَغِيرَةٍ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, nega u o'z ishini yaxshi ko'radi?",
+          arabic: true,
+          options: [
+            "لِأَنِّي أُسَاعِدُ التَّلَامِيذَ عَلَى التَّعَلُّمِ",
+            "لِأَنَّ الرَّاتِبَ كَبِيرٌ",
+            "لِأَنَّهُ بَعِيدٌ",
+            "لِأَنَّهُ صَعْبٌ"
+          ],
+          answer: 0,
+          explain: "«أُحِبُّ عَمَلِي لِأَنِّي أُسَاعِدُ التَّلَامِيذَ عَلَى التَّعَلُّمِ»."
+        },
+        {
+          type: "mcq",
+          prompt: "«هَلْ تُفَضِّلُ الْعَمَلَ أَمِ الدِّرَاسَةَ؟» — namunada qaysi biri afzal ko'rilgan?",
+          arabic: true,
+          options: ["الدِّرَاسَة (o'qish)", "الْعَمَل (ish)", "النَّوْم (uyqu)", "السَّفَر (sayohat)"],
+          answer: 0,
+          explain: "«أُفَضِّلُ الدِّرَاسَةَ لِأَنَّهَا تُسَاعِدُنِي عَلَى تَعَلُّمِ أَشْيَاءَ جَدِيدَةٍ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, otasi (أَبِي) kim bo'lib ishlaydi?",
+          arabic: true,
+          options: ["سَائِقًا (haydovchi)", "طَبَّاخًا (oshpaz)", "مُعَلِّمًا (o'qituvchi)", "طَبِيبًا (shifokor)"],
+          answer: 0,
+          explain: "«يَعْمَلُ أَبِي سَائِقًا، وَهُوَ يَقُودُ السَّيَّارَةَ كُلَّ يَوْمٍ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, onasi (أُمِّي) kim bo'lib ishlaydi?",
+          arabic: true,
+          options: ["طَبَّاخَةٌ (oshpaz)", "مُعَلِّمَةٌ (o'qituvchi)", "طَبِيبَةٌ (shifokor)", "سَائِقَةٌ (haydovchi)"],
+          answer: 0,
+          explain: "«أَمَّا أُمِّي فَهِيَ طَبَّاخَةٌ، تُعِدُّ الطَّعَامَ اللَّذِيذَ»."
+        },
+        {
+          type: "mcq",
+          prompt: "Namunaga ko'ra, akasi (أَخِي) qayerda ishlaydi?",
+          arabic: true,
+          options: ["فِي مَتْجَرٍ صَغِيرٍ", "فِي الْمَدْرَسَةِ", "فِي الْمُسْتَشْفَى", "فِي الْمَطَارِ"],
+          answer: 0,
+          explain: "«وَأَخِي يَعْمَلُ فِي مَتْجَرٍ صَغِيرٍ»."
+        },
+        {
+          type: "mcq",
+          prompt: "«مُعَلِّم» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["o'qituvchi", "haydovchi", "oshpaz", "shifokor"],
+          answer: 0,
+          explain: "مُعَلِّم — o'qituvchi."
+        },
+        {
+          type: "mcq",
+          prompt: "«سَائِق» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["haydovchi", "o'qituvchi", "sotuvchi", "muhandis"],
+          answer: 0,
+          explain: "سَائِق — haydovchi."
+        },
+        {
+          type: "mcq",
+          prompt: "«طَبَّاخَة» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["oshpaz (ayol)", "o'qituvchi (ayol)", "shifokor (ayol)", "kotiba"],
+          answer: 0,
+          explain: "طَبَّاخَة — oshpaz (ayol)."
+        },
+        {
+          type: "mcq",
+          prompt: "«مَتْجَر» so'zining ma'nosi qaysi?",
+          arabic: true,
+          options: ["do'kon", "maktab", "shifoxona", "bog'"],
+          answer: 0,
+          explain: "مَتْجَر — do'kon, magazin."
+        },
+        {
+          type: "match",
+          prompt: "Kasblarni tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "مُعَلِّم", uz: "o'qituvchi" },
+            { ar: "سَائِق", uz: "haydovchi" },
+            { ar: "طَبَّاخَة", uz: "oshpaz" },
+            { ar: "طَبِيب", uz: "shifokor" }
+          ],
+          explain: "Kasb-hunar lug'ati."
+        },
+        {
+          type: "match",
+          prompt: "So'zni o'zbekcha tarjimasi bilan juftlang",
+          pairs: [
+            { ar: "الْعَمَل", uz: "ish" },
+            { ar: "الدِّرَاسَة", uz: "o'qish" },
+            { ar: "السَّيَّارَة", uz: "mashina" },
+            { ar: "الطَّعَام", uz: "ovqat" }
+          ],
+          explain: "Mavzuga oid so'zlar."
+        },
+        {
+          type: "fill",
+          prompt: "Javobni to'ldiring: «أَنَا أَعْمَلُ ＿＿ فِي مَدْرَسَةٍ»",
+          arabic: true,
+          sentence: "أَنَا أَعْمَلُ ＿＿ فِي مَدْرَسَةٍ",
+          options: ["مُعَلِّمًا", "سَائِقًا", "طَبِيبًا", "تَاجِرًا"],
+          answer: 0,
+          explain: "«أَعْمَلُ مُعَلِّمًا فِي مَدْرَسَةٍ» — maktabda o'qituvchi bo'lib ishlayman."
+        },
+        {
+          type: "fill",
+          prompt: "Javobni to'ldiring: «يَعْمَلُ أَبِي ＿＿ وَهُوَ يَقُودُ السَّيَّارَةَ»",
+          arabic: true,
+          sentence: "يَعْمَلُ أَبِي ＿＿ وَهُوَ يَقُودُ السَّيَّارَةَ",
+          options: ["سَائِقًا", "مُعَلِّمًا", "طَبَّاخًا", "مُهَنْدِسًا"],
+          answer: 0,
+          explain: "«يَعْمَلُ أَبِي سَائِقًا» — otam haydovchi bo'lib ishlaydi."
+        },
+        {
+          type: "match",
+          prompt: "Savolni javobi bilan juftlang",
+          pairs: [
+            { ar: "مَاذَا تَعْمَلُ؟", uz: "أَعْمَلُ مُعَلِّمًا" },
+            { ar: "هَلْ تُفَضِّلُ الدِّرَاسَةَ؟", uz: "نَعَمْ، أُفَضِّلُ الدِّرَاسَةَ" },
+            { ar: "مَنْ يَعْمَلُ فِي بَيْتِكُمْ؟", uz: "أَبِي وَأُمِّي وَأَخِي" }
+          ],
+          arabicBoth: true,
+          explain: "Kasb-hunar mavzusidagi savol-javoblar."
+        }
+      ]
+    }
+
+  ]
+};
+
+const GAME_DATA = { lessons: [LESSON1, LESSON2, LESSON3, LESSON4] };
