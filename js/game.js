@@ -147,6 +147,13 @@ const App = (() => {
     const q = state.queue[state.idx];
     setProgress();
 
+    // MCQ / fill variantlarini har safar aralashtiramiz (to'g'ri javob A da qolib ketmasligi uchun)
+    if (q.type === "mcq" || q.type === "fill") {
+      const order = shuffle(q.options.map((_, i) => i));
+      q._opts = order.map(i => q.options[i]);
+      q._ans = order.indexOf(q.answer);
+    }
+
     const tag = `<div class="q-tag">${q.sec} · ${state.idx + 1}/${state.total}</div>`;
     let body = "";
     if (q.type === "mcq" || q.type === "fill") body = renderMCQ(q);
@@ -173,7 +180,7 @@ const App = (() => {
     const promptAr = q.arabic ? "" : "";
     const sentence = q.sentence
       ? `<div class="q-prompt ar" style="margin-bottom:14px">${q.sentence}</div>` : "";
-    const opts = q.options.map((o, i) =>
+    const opts = q._opts.map((o, i) =>
       `<button class="opt ${q.arabic ? "ar" : ""}" data-i="${i}">
         <span class="opt-key">${keys[i]}</span><span>${o}</span>
       </button>`).join("");
@@ -225,14 +232,14 @@ const App = (() => {
   function answerMCQ(q, i, btn) {
     if (state.answered) return;
     state.answered = true;
-    const correct = i === q.answer;
+    const correct = i === q._ans;
     document.querySelectorAll(".opt").forEach(b => b.classList.add("locked"));
     if (correct) {
       btn.classList.add("correct");
       onCorrect(q);
     } else {
       btn.classList.add("wrong");
-      const right = document.querySelector(`.opt[data-i="${q.answer}"]`);
+      const right = document.querySelector(`.opt[data-i="${q._ans}"]`);
       if (right) right.classList.add("correct");
       onWrong(q);
     }

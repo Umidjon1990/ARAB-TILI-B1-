@@ -111,9 +111,9 @@ const LESSON1 = {
           type: "mcq",
           prompt: "«فَرَّ» (qochdi) fe'lining هُوَ uchun muzoriy shakli qaysi?",
           arabic: true,
-          options: ["يَفِرُّ", "يَفُرُّ", "يَفَرُّ", "فَرُّوا"],
+          options: ["يَفِرُّ", "يَفُرُّ", "يَفَرُّ", "يُفَرُّ"],
           answer: 0,
-          explain: "فَرَّ ning o'rta unlisi «i» — shuning uchun muzoriysi يَفِرُّ."
+          explain: "فَرَّ ning o'rta unlisi «i» — shuning uchun muzoriysi يَفِرُّ (يُفَرُّ — majhul, qolganlari noto'g'ri unli)."
         }
       ]
     },
